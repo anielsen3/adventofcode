@@ -1,0 +1,2 @@
+» cat input.txt| awk '{ if (prev != 0 && $1 > prev) { x++ }; prev = $1 } END { print x }'                                                                               
+1462

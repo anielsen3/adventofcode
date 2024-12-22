@@ -1,0 +1,11 @@
+
+# PART 1:
+
+» cat input.txt| awk '{ if ($1 == "forward") { x += $2 }; if ($1 == "up") { y -= $2 }; if ($1 == "down") { y += $2 } } END { print x, y, x*y }' 
+1909 655 1250395
+
+# PART 2:
+
+» cat input.txt | awk '{ if ($1 == "forward") { x += $2; y += aim*$2 }; if ($1 == "up") { aim -= $2 }; if ($1 == "down") { aim += $2} } END { print x, y, aim, x * y }' 
+1909 760194 655 1451210346
+
